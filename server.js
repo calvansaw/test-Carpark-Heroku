@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: false })); // extended: false - does not 
 app.use(express.json()); // returns middleware that only parses JSON
 app.use(express.static('public'));
 app.use(cors({
-	origin: ['http://localhost:3000/', 'http://localhost:3000/sessions', 'http://localhost:3000/carparkdetails' ],
+	origin: ['http://localhost:3000', 'http://localhost:3000/sessions', 'http://localhost:3000/carparkdetails' ],
 	credentials: true
 }));
 // app.use((req, res, next) => {
