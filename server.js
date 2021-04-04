@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors')
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3004;
 const mongoose = require('mongoose');
 const session = require('express-session');
 const mongoURI = process.env.DB_URI || 'mongodb://localhost:27017/carpark';
@@ -61,7 +61,6 @@ const carparkController = require('./controllers/carpark');
 app.use('/carpark', carparkController);
 
 const commentController = require('./controllers/comments');
-const { json } = require('express');
 app.use('/comments', commentController);
 /////////////////////////////////////////////////////////////////
 
